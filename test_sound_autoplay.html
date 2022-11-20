@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <style>
+
+    .char-name-container
+    {
+      color: white;
+      background: rgba(165, 156, 156, 0);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(222, 27, 27, 0.1);
+      backdrop-filter: blur(6.9px);
+      -webkit-backdrop-filter: blur(6.9px);
+      border: 3px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50px;
+      height: 50%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .choose-character 
+    {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .choose-character img 
+    {
+      object-fit: contain;
+      height: 150px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div id="chooseCharacterScreen" class="game-container " >
+
+    <script  src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    
+    <lord-icon onclick="openMenu()" class="open-menu-button"
+        src="https://cdn.lordicon.com/kxoxiwrf.json"
+        trigger="hover"
+        style="width:100px;height:100px">
+    </lord-icon>
+    
+
+
+    <script>
+      playerName = [];
+      playerCharPicture = [];
+
+      function setPlayerName()
+      {
+        name = document.getElementById('inputPlayerName').value;
+
+        playerName.push(name)
+        document.getElementById('inputPlayerName').disabled = true;
+
+        document.getElementById('charPictures').style = ' '; 
+      }
+
+      function setPlayerCharacter(selection)
+      {
+        let selectedChar = selection.slice(-1);
+
+        charFemale = document.getElementById(selection).src;
+        
+
+        playerCharPicture.push(charFemale)
+        console.log('your char is', playerCharPicture)
+
+        document.getElementById('chooseCharacterScreen').classList.add('hide')
+      }
+
+    </script>
+    <div id="charNameContainer" class="char-name-container">
+
+        <div class="choose-name">
+          Choose your name <form action="" onsubmit="setPlayerName(); return false;";> <input id="inputPlayerName" placeholder="Choose a name..."  type="name" required> </form> 
+        </div>
+
+        <div id="charPictures" class="choose-character" style="display:none">
+
+            <span> Choose your Character</span>
+          <div>
+
+            <img onclick="setPlayerCharacter('char1')" id="char1" src="img/female.png" alt=""> 
+            <img onclick="setPlayerCharacter('char2')" id="char2" src="img/male.png" alt="">
+            <img onclick="setPlayerCharacter('char3')" id="char3" src="img/alien.png" alt="">
+
+          </div>
+        </div>
+
+    </div>
+
+</div>
+  
+
+</body>
+</html>

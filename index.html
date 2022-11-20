@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stray Star</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body onload="init()">
+    
+    
+ 
+    <div id="introScreen" class="intro-screen">
+
+    </div>
+
+
+    <div id="startScreen" class="start-screen">
+
+            <!-- WORK AROUND FOR PLAY SOUND IN CHROM -->
+      
+             <iframe src="sound/500-milliseconds-of-silence.mp3"  allow="autoplay" id="audio" style="display: none"></iframe>
+          
+          <!-- WORK AROUND FOR PLAY SOUND IN CHROM -->
+                <audio volume="0.1"  id="mainMenuSound"  loop>
+                  <source id="bgSound"  src="sound/main-menu-music.mp3"  type="audio/ogg" />
+                  <source id="bgSound"  src="sound/main-menu-music.mp3"  type="audio/mpeg" />    
+                </audio> 
+
+            <div onmouseover="playSound()" class="start-glas">  
+
+                <div class="star-field index-4">
+                    <div class="layer "></div>
+                    <div class="layer "></div>
+                    <div class="layer "></div>
+                </div> 
+                    
+                <div class="star-field 2 index-4">
+                    <div class="layer "></div>
+                    <div class="layer "></div>
+                    <div class="layer "></div>
+                </div> 
+            
+                        <span style="color:white" class="start-text main-screen-animation">Stray Star</span>
+                        <Button onmouseover="hoverMenuButton()" onclick="closeMenu()" class="glow-on-hover">Play</Button>
+                        <Button onmouseover="hoverMenuButton()" onclick="openSettings()" class="glow-on-hover">Settings</Button>
+                        <Button onmouseover="hoverMenuButton()" onclick="" class="glow-on-hover">Credits</Button>
+                        <Button onmouseover="hoverMenuButton()" onclick="" class="glow-on-hover">Share</Button>
+      
+            </div>
+    </div>
+
+    <div id="settingScreen" class="setting-screen hide">
+
+          <!-- WORK AROUND FOR PLAY SOUND IN CHROM -->
+      
+          <iframe src="sound/500-milliseconds-of-silence.mp3"  allow="autoplay" id="audio" style="display: none"></iframe>
+          
+          <!-- WORK AROUND FOR PLAY SOUND IN CHROM -->
+            <audio volume="0.1"  id="mainMenuSound"  loop>
+                  <source id="bgSound"  src="sound/main-menu-music.mp3"  type="audio/ogg" />
+                  <source id="bgSound"  src="sound/main-menu-music.mp3"  type="audio/mpeg" />    
+            </audio> 
+
+        <div class="start-glas settings-change">  
+  
+          <script  src="https://cdn.lordicon.com/qjzruarw.js"></script>
+  
+          <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+          
+          <lord-icon onclick="openMenu()" class="open-menu-button"
+              src="https://cdn.lordicon.com/kxoxiwrf.json"
+              trigger="hover"
+              style="width:100px;height:100px">
+          </lord-icon>
+  
+             <div class="settings"> 
+              
+              <div class="settings-title">
+                <span> Volume :</span>
+                <span> Language :</span>
+                <span>Difficulty :</span>
+              </div>   
+  
+  
+  
+              <div class="settings-value">
+                <span onmouseover="hoverMenuButton()"> 50%</span>
+                <span onmouseover="hoverMenuButton()"> English</span>
+                <span onmouseover="hoverMenuButton()">Normal</span>
+            </div>
+  
+  
+  
+            <div class="star-field index-4">
+                <div class="layer "></div>
+                <div class="layer "></div>
+                <div class="layer "></div>
+            </div> 
+                
+            <div class="star-field 2 index-4">
+                <div class="layer "></div>
+                <div class="layer "></div>
+                <div class="layer "></div>
+            </div> 
+        
+               
+  
+        </div>
+      </div>
+    </div>
+
+    <div id="mainGameScreen" class="game-container hide" >
+
+        
+        
+        <lord-icon onclick="openMenu()" class="open-menu-button"
+            src="https://cdn.lordicon.com/kxoxiwrf.json"
+            trigger="hover"
+            style="width:100px;height:100px">
+        </lord-icon>
+      
+
+    </div>
+
+    <!--<div id="chooseCharacterScreen" class="game-container " >
+
+        <script  src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    
+        <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+        
+        <lord-icon onclick="openMenu()" class="open-menu-button"
+            src="https://cdn.lordicon.com/kxoxiwrf.json"
+            trigger="hover"
+            style="width:100px;height:100px">
+        </lord-icon>
+        
+    
+         CHAR SELECTION AREA 
+        <div id="charNameContainer" class="char-name-container">
+    
+             <div class="choose-name">
+              Choose your name <form action="" onsubmit="setPlayerName(); return false;";> <input id="inputPlayerName" placeholder="Choose a name..."  type="name" required> </form> 
+            </div>
+    
+            <div id="charPictures" class="choose-character" >
+    
+                <span> Choose your Character</span>
+              <div>
+    
+                <img onclick="setPlayerCharacter('char1')" id="char1" src="img/female.png" alt=""> 
+                <img onclick="setPlayerCharacter('char2')" id="char2" src="img/male.png" alt="">
+                <img onclick="setPlayerCharacter('char3')" id="char3" src="img/alien.png" alt="">
+    
+              </div>
+            </div>
+    
+        </div>
+    
+    </div> -->
+  
+
+
+
+
+</body>
+</html>
